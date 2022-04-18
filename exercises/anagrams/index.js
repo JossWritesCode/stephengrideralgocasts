@@ -10,7 +10,7 @@
 
 function anagrams(stringA, stringB) {
  
-  return stringA.trim().split('').sort().join('') === stringB.trim().split('').sort().join('')
+  return stringA.trim().toLowerCase().split('').sort().join('') === stringB.trim().toLowerCase().split('').sort().join('')
 
 }
 
