@@ -14,6 +14,19 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {}
+const steps = require("../steps");
+
+function pyramid(n, h = 1, i = 1) {
+    const hash = "#";
+    const space = " ";
+
+    if (i > n) {
+        return;
+    } else {
+        console.log(space.repeat(Math.floor(n - h / 2)) + hash.repeat(h) + space.repeat(Math.floor(n - h / 2)))
+        pyramid(n, h + 2, i + 1)
+    }
+
+}
 
 module.exports = pyramid;
